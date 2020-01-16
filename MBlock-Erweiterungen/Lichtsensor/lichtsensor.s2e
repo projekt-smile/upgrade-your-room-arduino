@@ -1,0 +1,31 @@
+{	"extensionName": "Lichtsensor",
+	"description": "Eine Erweiterung von Smile für den Grove Lichtsensor.",
+	"version": "1.0",
+	"author": "Sebatian Kühlewind",
+	"homepage": "",
+	"sort":0,
+	"javascriptURL":"js/lichtsensor.js",
+  "firmware":"1.0",
+  "extensionPort":0,
+	"blockSpecs": [
+		[
+			"r",
+			"Helligkeit %d.analog",
+			"helligkeit",
+			"0",
+			{
+				"setup":"pinMode(A{0}, INPUT);\n",
+				"inc":"",
+				"def":"",
+				"work":"analogRead(A{0})",
+				"loop":""
+			}
+		],
+	],
+	"menus": {
+		"analog":["A0","A1","A2","A3"],
+	},
+	"values": {
+		"A0":0,"A1":1,"A2":2,"A3":3,
+	}
+}

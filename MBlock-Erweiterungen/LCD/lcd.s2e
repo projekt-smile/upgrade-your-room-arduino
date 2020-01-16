@@ -1,0 +1,99 @@
+{	"extensionName": "LCD-Display",
+	"description": "Eine Erweiterung von Smile für den Grove LCD.",
+	"version": "1.0",
+	"author": "Sebatian Kühlewind (Sebastian.Kuehlewind@uol.de), Arne Bernin",
+	"homepage": "http://smile-smart-it.de/",
+	"sort":0,
+	"javascriptURL":"js/lcd.js",
+  "firmware":"1.0",
+  "extensionPort":0,
+	"blockSpecs": [
+		[
+			"w",
+			"LCD Text anzeigen: %s",
+			"LCDtext",
+			"Hallo Welt!",
+			{
+				"setup":"lcd.begin(16,2);\n",
+				"inc":"#include <Wire.h>\n#include \"rgb_lcd.h\"\n",
+				"def":"rgb_lcd lcd;\n",
+				"work":"lcd.print({0});\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"LCD leer machen",
+			"LCDleer",
+			"",
+			{
+				"setup":"lcd.begin(16,2);\n",
+				"inc":"#include <Wire.h>\n#include \"rgb_lcd.h\"\n",
+				"def":"rgb_lcd lcd;\n",
+				"work":"lcd.clear();\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"LCD aus",
+			"LCDaus",
+			"",
+			{
+				"setup":"lcd.begin(16,2);\n",
+				"inc":"#include <Wire.h>\n#include \"rgb_lcd.h\"\n",
+				"def":"rgb_lcd lcd;\n",
+				"work":"lcd.setRGB(0,0,0);\nlcd.noDisplay();\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"LCD an",
+			"LCDan",
+			"",
+			{
+				"setup":"lcd.begin(16,2);\n",
+				"inc":"#include <Wire.h>\n#include \"rgb_lcd.h\"\n",
+				"def":"rgb_lcd lcd;\n",
+				"work":"lcd.display();\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"LCD Zeigerposition Zeile: :%d.zeilen Spalte: %d.spalten",
+			"LCDZeiger",
+			0,
+			0,
+			{
+				"setup":"lcd.begin(16,2);\n",
+				"inc":"#include <Wire.h>\n#include \"rgb_lcd.h\"\n",
+				"def":"rgb_lcd lcd;\n",
+				"work":"lcd.setCursor({1},{0});\n",
+				"loop":""
+			}
+		],	
+		[
+			"w",
+			"LCD Farbe: %m.farbe",
+			"LCDfarbe",
+			"blau",
+			{
+				"setup":"lcd.begin(16,2);\n",
+				"inc":"#include <Wire.h>\n#include \"rgb_lcd.h\"\n",
+				"def":"rgb_lcd lcd;\n",
+				"work":"lcd.setColor({0});\n",
+				"loop":""
+			}
+		],
+	],
+	"menus": {
+		"farbe":["weiß", "rot", "grün", "blau"],
+		"zeilen":["0","1"],
+		"spalten":["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],
+	},
+	"values": {
+		"weiß":0,"rot":1,"grün":2,"blau":3,
+	}
+}

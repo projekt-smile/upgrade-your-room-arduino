@@ -1,0 +1,44 @@
+{	"extensionName": "Temperatur- und Luftfeuchtigkeitssensor",
+	"description": "Eine Erweiterung von Smile für den Grove Tempereratur- und Luftfeuchtigkeitssensor.",
+	"version": "1.0",
+	"author": "Sebatian Kühlewind",
+	"homepage": "",
+	"sort":0,
+	"javascriptURL":"js/temperature.js",
+  "firmware":"1.0",
+  "extensionPort":0,
+	"blockSpecs": [
+		[
+			"r",
+			"Temperatur",
+			"temperatur",
+			{
+				"setup":"TH02.begin();\n",
+				"inc":"#include \"TH02_dev.h\"\n",
+				"def":"",
+				"work":"TH02.ReadTemperature()",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"Luftfeuchtigkeit",
+			"luftfeuchtigkeit",
+			{
+				"setup":"TH02.begin();\n",
+				"inc":"#include \"TH02_dev.h\"\n",
+				"def":"",
+				"work":"TH02.ReadHumidity()",
+				"loop":""
+			}
+		]
+	],
+	"menus": {
+		"options":["1", "2", "3"]
+	},
+	"values": {
+		"1": "1",
+		"2": "2",
+		"3": "3"
+	}
+}
