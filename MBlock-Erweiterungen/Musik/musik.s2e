@@ -1,0 +1,81 @@
+{	"extensionName": "Musik",
+	"description": "Eine Erweiterung von Smile für den Grove MP3 Spieler",
+	"version": "1.0",
+	"author": "Sebatian Kühlewind (Sebastian.Kuehlewind@uol.de)",
+	"homepage": "http://smile-smart-it.de/",
+	"sort":0,
+	"javascriptURL":"js/musik.js",
+  "firmware":"1.0",
+  "extensionPort":0,
+	"blockSpecs": [
+		[
+			"w",
+			"Spiele Lied %d.zahlen an Pin %d.digital",
+			"spielLied",
+			"1",
+			"D2",
+			{
+				"setup":"mp3.begin(9600);\nSelectPlayerDevice(0x02);\nSetVolume(0x0E);\n",
+				"inc":"#include \"MP3Player_KT403A.h\"\n",
+				"def":"int mp3_Pin1={1};\nint mp3_Pin2=mp3_Pin1 + 1;\nSoftwareSerial mp3(mp3_Pin1, mp3_Pin2);",
+				"work":"PlayMP3folder((\'{0}\') - \'0\');\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Pausiere aktuelles Lied",
+			"pausiereLied",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"PlayPause();\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Setze aktuelles Lied fort",
+			"fortsetzenLied",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"PlayResume();\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Mache Musik lauter",
+			"lauterMusik",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"IncreaseVolume();\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Mache Musik leiser",
+			"leiserMusik",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"DecreaseVolume();\n",
+				"loop":""
+			}
+		],
+	],
+	"menus": {
+		"zahlen":["1","2","3","4","5","6","7","8","9","10"],
+		"digital":["D2","D3","D4","D5","D6","D7","D8"],
+	},
+	"values": {
+		"D2":2,"D3":3,"D4":4,"D5":5,"D6":6,"D7":7,"D8":8,
+	}
+}

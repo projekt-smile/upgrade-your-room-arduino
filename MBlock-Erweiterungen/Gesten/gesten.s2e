@@ -1,0 +1,148 @@
+{	"extensionName": "Gestensensor",
+	"description": "Eine Erweiterung von Smile für den Grove Gestensensor",
+	"version": "1.0",
+	"author": "Sebatian Kühlewind (Sebastian.Kuehlewind@uol.de)",
+	"homepage": "http://smile-smart-it.de/",
+	"sort":0,
+	"javascriptURL":"js/gesten.js",
+  "firmware":"1.0",
+  "extensionPort":0,
+	"blockSpecs": [
+		[
+			"b",
+			"Geste %s",
+			"geste",
+			"",
+			{
+				"setup":"paj7620Init();\n",
+				"inc":"#include \"paj7620.h\"\n",
+				"def":"uint8_t gestenSensorWert=0;\n",
+				"work":"gestenSensorWert=={0}",
+				"loop":"paj7620ReadReg(0x43,1,&gestenSensorWert);\n"
+			}
+		],
+		[
+			"r",
+			"Hoch",
+			"hoch",
+			"",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"GES_UP_FLAG",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"Runter",
+			"runter",
+			"",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"GES_DOWN_FLAG",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"Rechts",
+			"rechts",
+			"",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"GES_RIGHT_FLAG",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"Links",
+			"links",
+			"",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"GES_LEFT_FLAG",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"Vorwärts",
+			"vorwärts",
+			"",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"GES_FORWARD_FLAG",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"Rückwärts",
+			"rückwärts",
+			"",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"GES_BACKWARD_FLAG",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"im Uhrzeigersinn",
+			"uhrzeigersinn",
+			"",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"GES_CLOCKWISE_FLAG",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"gegen Uhrzeigersinn",
+			"gegenUhrzeigersinn",
+			"",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"GES_COUNT_CLOCKWISE_FLAG",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"Welle",
+			"welle",
+			"",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"GES_WAVE_FLAG",
+				"loop":""
+			}
+		],
+	],
+	"menus": {
+
+	},
+	"values": {
+	
+	}
+}

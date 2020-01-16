@@ -1,0 +1,31 @@
+{	"extensionName": "Ultraschallsensor",
+	"description": "Eine Erweiterung von Smile für den Grove Ultraschallsensor.",
+	"version": "1.0",
+	"author": "Sebatian Kühlewind",
+	"homepage": "",
+	"sort":0,
+	"javascriptURL":"js/ultraschall.js",
+  "firmware":"1.0",
+  "extensionPort":0,
+	"blockSpecs": [
+		[
+			"r",
+			"Abstand %d.digital",
+			"abstand",
+			"D2",
+			{
+				"setup":"",
+				"inc":"#include \"Ultrasonic.h\"\n",
+				"def":"Ultrasonic ultrasonic({0});\n",
+				"work":"ultrasonic.MeasureInCentimeters()",
+				"loop":""
+			}
+		],
+	],
+	"menus": {
+		"digital":["D2","D3","D4","D5","D6","D7","D8"],
+	},
+	"values": {
+		"D2":2,"D3":3,"D4":4,"D5":5,"D6":6,"D7":7,"D8":8,
+	}
+}
