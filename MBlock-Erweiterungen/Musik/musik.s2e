@@ -10,15 +10,26 @@
 	"blockSpecs": [
 		[
 			"w",
-			"Spiele Lied %d.zahlen an Pin %d.digital",
-			"spielLied",
-			"1",
-			"D2",
+			"Schließe Musik an Pin %d.digital an",
+			"schliesseMusikAn",
 			{
-				"setup":"mp3.begin(9600);\nSelectPlayerDevice(0x02);\nSetVolume(0x0E);\n",
+				"setup":"mp3.begin(9600);\nSelectPlayerDevice(0x02);\nSetVolume(0);\n",
 				"inc":"#include \"MP3Player_KT403A.h\"\n",
 				"def":"int mp3_Pin1={1};\nint mp3_Pin2=mp3_Pin1 + 1;\nSoftwareSerial mp3(mp3_Pin1, mp3_Pin2);",
-				"work":"PlayMP3folder((\'{0}\') - \'0\');\n",
+				"work":"",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Spiele Lied %d.zahlen",
+			"spielLied",
+			"1",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"SpecifyMusicPlay({0});\n",
 				"loop":""
 			}
 		],
@@ -67,6 +78,30 @@
 				"inc":"",
 				"def":"",
 				"work":"DecreaseVolume();\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Nächstes Lied",
+			"naechstesLied",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"PlayNext();\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Vorheriges Lied",
+			"vorherigesLied",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"PlayPrevious();\n",
 				"loop":""
 			}
 		],
