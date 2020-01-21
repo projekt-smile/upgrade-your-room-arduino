@@ -12,10 +12,11 @@
 			"w",
 			"Schließe Musik an Pin %d.digital an",
 			"schliesseMusikAn",
+			"D2",
 			{
 				"setup":"mp3.begin(9600);\nSelectPlayerDevice(0x02);\nSetVolume(0);\n",
 				"inc":"#include \"MP3Player_KT403A.h\"\n",
-				"def":"int mp3_Pin1={1};\nint mp3_Pin2=mp3_Pin1 + 1;\nSoftwareSerial mp3(mp3_Pin1, mp3_Pin2);",
+				"def":"int mp3_Pin1={0};\nint mp3_Pin2=mp3_Pin1 + 1;\nSoftwareSerial mp3(mp3_Pin1, mp3_Pin2);",
 				"work":"",
 				"loop":""
 			}
@@ -54,6 +55,19 @@
 				"inc":"",
 				"def":"",
 				"work":"PlayResume();\n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Setze Lautstärke auf %d.zahlen",
+			"lautstaerkeSetzen",
+			"1",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"SetVolume({0});\n",
 				"loop":""
 			}
 		],
