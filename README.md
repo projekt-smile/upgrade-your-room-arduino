@@ -11,4 +11,4 @@ Dies ist das Repository zum Workshop "Upgrade Your Room" mit dem Arduino, der vo
 | [Material 05](/Material_05_Matrix_Vorlage.pdf) | Matrix-Vorlage. Wird benutzt um auf der externen RGB LED Matrix Symbole zu zeichnen. Dies gilt als Vorlage und wird in der Ideenphase benutzt und kann im Nachgang umgesetzt werden|
 | [Material 06](/Material_06_Matrix_Vorlage2.pdf) |Matrix-Vorlage mit integrierten Pixelzahlen|
 | [Material 07](Material_07_Hilfekarten_Arduino.pdf) | Hilfekarten für den Arduino|
-| [Material 08](Material_08_Arduino-Bibliotheken) | Arduino-Hilfekarten  |
+| [Material 08](Material_08_Arduino-Bibliotheken) | Erweiterungen für mBlock |
